@@ -40,6 +40,18 @@ body {
     border-radius: 0.5rem;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-size: 1rem;
+    visibility: hidden;
+}
+
+#toggleRadius {
+    --Xpos: 0;
+    --Ypos: 0;
+    position: absolute;
+    top: var(--Ypos);
+    left: var(--Xpos);
+    padding: 2rem;
+    width: 2vw;
+    height: 3vh;
 }
 
 #flashlight {
