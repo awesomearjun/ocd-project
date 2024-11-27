@@ -1,0 +1,91 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#ocd {
+   font-size: 15rem; 
+   transition-delay: 300ms;
+   transition-timing-function: ease;
+   position: relative;
+   border: none;
+}
+
+#ocd:before {
+    content: attr(data-title);
+    background: linear-gradient(#f107ba, #155af0);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    transition: all 1s ease-in-out;
+    color: transparent;
+    background-clip: text;
+    border-radius: 100%;
+}
+
+#toolTip #toolTipText {
+    visibility: hidden;
+    text-align: center;
+}
+
+#toolTip {position: relative}
+
+#toolTipText {
+    background-color: rgb(0, 0, 0);
+    padding: 1rem;
+    border-color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+}
+
+#toolTip:hover #toolTipText {
+    visibility: visible;
+}
+
+#ocd:hover::before {
+    width: 100%;
+}
+
+#ocd:hover {
+    cursor: pointer;
+}
+
+#ocd:hover #toolTip {
+    visibility: visible;
+    opacity: 1;
+}
+
+a {
+    color: rgba(255, 255, 255, 0.87);
+    text-decoration: none;
+}
+
+#intro {
+    position: absolute;
+    bottom: 0;
+    right: 1rem;
+}
