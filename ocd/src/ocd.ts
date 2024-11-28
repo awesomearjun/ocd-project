@@ -21,6 +21,18 @@ toggle!.addEventListener("mouseover", event => {
 
 toggleButton.addEventListener("click", event => {
     document.querySelector("#content")!.style.visibility = "visible";
+    document.documentElement.style.setProperty("--background", "#242424");
     toggleButton.remove();
 });
 
+let search = document.querySelector("#search");
+let searchPlaceholder = document.querySelector("#searchPlaceholder");
+
+search?.addEventListener("dragover", event => {
+    event.preventDefault();
+});
+
+search?.addEventListener("drop", event => {
+    searchPlaceholder?.remove();
+    location.replace("./mental.html");
+});

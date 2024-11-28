@@ -21,6 +21,7 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 #content {
@@ -59,3 +60,23 @@ body {
     --Ypos: 50vh;
 }
 
+#secret {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
+  cursor: grab;
+}
+
+#secret:active {
+  cursor: grabbing;
+}
+
+#search {
+  background-color: rgb(53, 53, 53);
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: rgb(114, 114, 114);
+  font-size: 1rem;
+}
