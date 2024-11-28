@@ -1,6 +1,7 @@
 import "./ocd.css";
 
-let toggle = document.querySelector("#toggleRadius");
+let toggle: HTMLDivElement | null = document.querySelector("#toggleRadius") as HTMLDivElement;
+let toggleButton: Element | null = document.querySelector("#toggle") as HTMLButtonElement;
 
 let bufferZone = 10
 let maxToggleX = window.innerWidth - toggle.offsetWidth - bufferZone;
@@ -14,13 +15,12 @@ toggle.style.setProperty("--Ypos", toggleY + "px");
 console.log(toggleX);
 console.log(toggleY);
 
-let toggleButton = document.querySelector("#toggle");
-
-toggle.addEventListener("mouseover", event => {
-    toggleButton.style.visibility = "visible";
+toggle!.addEventListener("mouseover", event => {
+    toggleButton!.style.visibility = "visible";
 });
 
 toggleButton.addEventListener("click", event => {
-    document.querySelector("#content").style.visibility = "visible";
+    document.querySelector("#content")!.style.visibility = "visible";
+    toggleButton.remove();
 });
 
