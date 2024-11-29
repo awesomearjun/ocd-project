@@ -8,6 +8,7 @@ let maxToggleX = window.innerWidth - toggle.offsetWidth - bufferZone;
 let maxToggleY = window.innerHeight - toggle.offsetHeight - bufferZone;
 let toggleX: number = Math.floor(Math.random() * maxToggleX);
 let toggleY: number = Math.floor(Math.random() * maxToggleY);
+let clicked: boolean = false;
 
 toggle.style.setProperty("--Xpos", toggleX + "px");
 toggle.style.setProperty("--Ypos", toggleY + "px");
@@ -23,10 +24,16 @@ toggleButton.addEventListener("click", event => {
     document.querySelector("#content")!.style.visibility = "visible";
     document.documentElement.style.setProperty("--background", "#242424");
     toggleButton.remove();
+    clicked = true;
 });
 
 let search = document.querySelector("#search");
 let searchPlaceholder = document.querySelector("#searchPlaceholder");
+let secret = document.querySelector("#secret");
+
+secret?.addEventListener("click", event => {
+    secret.textContent = "you can drag me around, and you probably gotta SEARCH for the answer";
+});
 
 search?.addEventListener("dragover", event => {
     event.preventDefault();
