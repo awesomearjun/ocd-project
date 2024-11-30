@@ -32,7 +32,7 @@ let searchPlaceholder = document.querySelector("#searchPlaceholder");
 let secret = document.querySelector("#secret");
 
 secret?.addEventListener("click", event => {
-    secret.textContent = "you can drag me around, and you probably gotta SEARCH for the answer";
+    secret.textContent = "drag me to the ALL the way to the bottom, exactly the way i like it ^-^";
 });
 
 search?.addEventListener("dragover", event => {
