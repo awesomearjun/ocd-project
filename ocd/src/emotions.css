@@ -22,14 +22,3 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
-
-#special {
-    cursor: help;
-    color: white;
-    text-decoration: none;
-}
-
-#special:visited {
-    color: white;
-    text-decoration: none;
-}
